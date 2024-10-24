@@ -1,0 +1,14 @@
+# Otomatis menangani line endings berdasarkan sistem operasi
+* text=auto
+
+# Definisi untuk penanganan file khusus berdasarkan jenis diff
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+# File yang diabaikan saat membuat archive
+/.github export-ignore
+CHANGELOG.md export-ignore
+.styleci.yml export-ignore

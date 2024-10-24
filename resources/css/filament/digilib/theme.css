@@ -1,0 +1,99 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@config 'tailwind.config.js';
+
+/* Mengganti background sidebar dengan dua gambar */
+.fi-sidebar {
+    background-image: 
+        url('/img/Region5.png'), 
+        linear-gradient(rgba(255, 255, 255, 0.417), rgba(255, 255, 255, 0.417)), /* Warna putih dengan opacity 50% di atas gambar */
+        url('/img/sawit.jpeg'); /* Gambar 'Sawit' di belakang */
+    background-size: 100%, 100%, cover; /* Ukuran gambar 'Region5', gradient, dan 'Sawit' */
+    background-position: center 90%, center, center; /* Posisi 'Region5', gradient, dan 'Sawit' */
+    background-repeat: no-repeat, no-repeat, no-repeat; /* Kedua gambar tidak mengulang */
+    padding-bottom: 70px; /* Jarak dari bawah untuk memberi ruang pada gambar */
+    min-height: 100vh; /* Pastikan sidebar setinggi viewport */
+    @apply dark:bg-transparent !important;
+    
+    /* Menambahkan shadow pada sisi kanan */
+    @apply shadow-lg; /* Ganti dengan shadow-lg untuk mode terang */
+}
+
+/* Menambahkan shadow untuk mode gelap */
+@media (prefers-color-scheme: dark) {
+    .fi-sidebar {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* White shadow untuk mode gelap */
+    }
+}
+
+/* Sidebar Group Font */
+.fi-sidebar-group div span {
+    @apply text-black dark:text-white; /* Font hitam di light mode dan putih di dark mode */
+}
+
+/* Sidebar Item Icon */
+.fi-sidebar-item-icon {
+    @apply text-black dark:text-white; /* Font hitam di light mode dan putih di dark mode */
+}
+
+/* Sidebar Item Link */
+.fi-sidebar-item a {
+    @apply text-black dark:text-white; /* Font hitam di light mode dan putih di dark mode */
+}
+
+/* Sidebar Item Label */
+.fi-sidebar-item-label {
+    @apply text-black dark:text-white; /* Font hitam di light mode dan putih di dark mode */
+}
+
+/* Hover State for Sidebar Item */
+.fi-sidebar-item a:hover {
+    @apply text-black dark:text-white bg-primary-700; /* Hover sesuai mode */
+}
+
+/* Active Sidebar Item */
+.fi-sidebar-item-active a {
+    @apply text-white bg-primary-800; /* Teks tetap putih pada item aktif */
+}
+
+/* Active Sidebar Item Label (ubah warna font menjadi putih saat di klik) */
+.fi-sidebar-item-active .fi-sidebar-item-label {
+    @apply text-white; /* Warna font menjadi putih pada item aktif */
+}
+
+/* Active Sidebar Item Icon (ubah warna ikon menjadi putih saat di klik) */
+.fi-sidebar-item-active .fi-sidebar-item-icon {
+    @apply text-white; /* Ikon tetap putih pada item aktif */
+}
+
+/* Main Container */
+.fi-main-ctn {
+    @apply bg-primary-50 dark:bg-transparent;
+}
+
+/* Gaya untuk halaman login */
+.fi-panel-digilib {
+    background-image: url('/img/SAWIT-LAHAN.jpg?v=1');
+ /* Pastikan path sudah benar */
+    background-repeat: no-repeat;
+    background-size: cover; /* Memastikan gambar mengisi seluruh area */
+    background-position: center; /* Memusatkan gambar */
+    min-height: 100vh; /* Memastikan halaman login setinggi viewport */
+    display: flex; /* Mengatur konten agar bisa ditata dengan flexbox */
+    justify-content: center; /* Memusatkan konten secara horizontal */
+    align-items: center; /* Memusatkan konten secara vertikal */
+}
+
+
+/* .fi-main {
+    background-image: url('/img/sawit.jpeg?v=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+} */
+
+
